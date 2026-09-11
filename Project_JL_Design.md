@@ -25,6 +25,29 @@
     single-player experiences.
 -   An action game where you are constantly chaining attacks together.
 
+## First Responder Idea
+
+- 2D, menu based game,
+- map of city showing accidents, different first responder locations
+- Could be rouge like, as you do more runs you unlock more vehicles and ways to respond
+- different cities with unique difficulties on responding to accidents
+
+## Action "John Wick" Idea
+
+- Combination of chaining attacks and highly usable environment
+- Slow mo to aid in cohesion of attacks
+- creativity being used to aid in combat
+- 2D top down or first person style
+- More complex game mechanics but allows for more learning
+- Possibly add in powers of morphing game environments
+
+## Puzzle Multiple Run Idea 
+
+- Hotel or some sort of service environment
+- Player must complete task with a character, then time rolls back and they have to do another one at same time as there old character does the same task
+- Could stack lots of characters, has to be strategic about what characters use which route around or elevators ect
+- High complexity ceiling, level design is most key component
+
 ## Game Engines
 
 ### Godot
