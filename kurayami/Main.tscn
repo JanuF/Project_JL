@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://8moaa6sptmox"]
+
+[ext_resource type="Texture2D" uid="uid://dn7rxehp8wtgm" path="res://icon.svg" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://ppx3icbnsgrr" path="res://Player.tscn" id="1_uu6xs"]
+
+[sub_resource type="Gradient" id="Gradient_glv2v"]
+offsets = PackedFloat32Array(0, 0.99698794)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uu6xs"]
+gradient = SubResource("Gradient_glv2v")
+fill = 1
+fill_from = Vector2(0.51086956, 0.49565217)
+fill_to = Vector2(0, 0.49130434)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrgxw"]
+size = Vector2(128, 129.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uu6xs"]
+polygon = PackedVector2Array(0, 0, 127.5, 0, 127.5, 128.5, 0, 128.5)
+
+[node name="Main" type="Node2D" unique_id=1736304844]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1323388510]
+color = Color(0.15426421, 0.38826093, 0.9999996, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1586717849]
+color = Color(0.39308554, 0.3930855, 0.39308548, 1)
+polygon = PackedVector2Array(-1, 2, 1, 647, 1152, 646, 1154, 2)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=359630163]
+position = Vector2(418, 321)
+scale = Vector2(17.968748, 10.015625)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_uu6xs")
+
+[node name="Player" parent="." unique_id=1525202441 node_paths=PackedStringArray("light") instance=ExtResource("1_uu6xs")]
+position = Vector2(622, 288)
+light = NodePath("../PointLight2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1296993994]
+position = Vector2(622, 288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=137007931]
+shape = SubResource("RectangleShape2D_qrgxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=734657117]
+texture = ExtResource("1_glv2v")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D" unique_id=1784002196]
+position = Vector2(-64, -65)
+occluder = SubResource("OccluderPolygon2D_uu6xs")

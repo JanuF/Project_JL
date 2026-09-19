@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ppx3icbnsgrr"]
+
+[ext_resource type="Script" uid="uid://c1574tyb68xhe" path="res://scripts/player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://dn7rxehp8wtgm" path="res://icon.svg" id="1_xhfnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lw856"]
+size = Vector2(128, 130)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qrgxw"]
+polygon = PackedVector2Array(-63, -65, -64, 65, 64, 66, 64, -66)
+
+[node name="Player" type="CharacterBody2D" unique_id=1525202441]
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476027784]
+texture = ExtResource("1_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884643544]
+shape = SubResource("RectangleShape2D_lw856")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1424932557]
+occluder = SubResource("OccluderPolygon2D_qrgxw")
