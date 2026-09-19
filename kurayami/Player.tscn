@@ -11,6 +11,11 @@ polygon = PackedVector2Array(-63, -65, -64, 65, 64, 66, 64, -66)
 
 [node name="Player" type="CharacterBody2D" unique_id=1525202441]
 script = ExtResource("1_kpjcp")
+speed = null
+light_radius = null
+darkness_threshold = null
+gun_range = null
+teleport_distance = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476027784]
 texture = ExtResource("1_xhfnw")
@@ -20,3 +25,6 @@ shape = SubResource("RectangleShape2D_lw856")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1424932557]
 occluder = SubResource("OccluderPolygon2D_qrgxw")
+
+[node name="TeleportIndicator" type="Polygon2D" parent="." unique_id=1732400523]
+polygon = PackedVector2Array(-5, -6.5, -5, 5.5, 5, 5.5, 6, -6.5)

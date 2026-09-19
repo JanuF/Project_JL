@@ -2,16 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dn7rxehp8wtgm" path="res://icon.svg" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://ppx3icbnsgrr" path="res://Player.tscn" id="1_uu6xs"]
-
-[sub_resource type="Gradient" id="Gradient_glv2v"]
-offsets = PackedFloat32Array(0, 0.99698794)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uu6xs"]
-gradient = SubResource("Gradient_glv2v")
-fill = 1
-fill_from = Vector2(0.51086956, 0.49565217)
-fill_to = Vector2(0, 0.49130434)
+[ext_resource type="PackedScene" uid="uid://c0mtk5vrsmtsl" path="res://Light.tscn" id="2_r0du0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrgxw"]
 size = Vector2(128, 129.5)
@@ -28,15 +19,17 @@ color = Color(0.15426421, 0.38826093, 0.9999996, 1)
 color = Color(0.39308554, 0.3930855, 0.39308548, 1)
 polygon = PackedVector2Array(-1, 2, 1, 647, 1152, 646, 1154, 2)
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=359630163]
-position = Vector2(418, 321)
-scale = Vector2(17.968748, 10.015625)
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_uu6xs")
+[node name="Light" parent="." unique_id=1749419172 instance=ExtResource("2_r0du0")]
+position = Vector2(227, 313)
 
 [node name="Player" parent="." unique_id=1525202441 node_paths=PackedStringArray("light") instance=ExtResource("1_uu6xs")]
-position = Vector2(622, 288)
-light = NodePath("../PointLight2D")
+position = Vector2(500, 125)
+speed = 300.0
+light = NodePath("../Light")
+light_radius = 500.0
+darkness_threshold = 0.3
+gun_range = 1000.0
+teleport_distance = 300.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1296993994]
 position = Vector2(622, 288)
