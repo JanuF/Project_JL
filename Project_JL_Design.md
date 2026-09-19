@@ -40,6 +40,7 @@
 - 2D top down or first person style
 - More complex game mechanics but allows for more learning
 - Possibly add in powers of morphing game environments
+- Use dynamic lighting in a way to teleport or as one of the main game mechanics
 
 ## Puzzle Multiple Run Idea 
 
