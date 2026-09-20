@@ -148,5 +148,7 @@ func shoot() -> void:
 	if result:
 		var collider = result.collider
 
-		if collider.get_parent().has_method("shot"):
+		if collider.has_method("shot"):
+			collider.shot()
+		elif collider.get_parent().has_method("shot"):
 			collider.get_parent().shot()

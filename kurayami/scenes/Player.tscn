@@ -9,13 +9,8 @@ size = Vector2(128, 130)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qrgxw"]
 polygon = PackedVector2Array(-63, -65, -64, 65, 64, 66, 64, -66)
 
-[node name="Player" type="CharacterBody2D" unique_id=1525202441]
+[node name="Player" type="CharacterBody2D" unique_id=1525202441 groups=["player"]]
 script = ExtResource("1_kpjcp")
-speed = null
-light_radius = null
-darkness_threshold = null
-gun_range = null
-teleport_distance = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476027784]
 texture = ExtResource("1_xhfnw")
