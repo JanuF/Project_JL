@@ -8,6 +8,7 @@
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lw856"]
+resource_local_to_scene = true
 gradient = SubResource("Gradient_mla15")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -19,12 +20,16 @@ size = Vector2(511, 509)
 [node name="Light" type="Node2D" unique_id=1749419172]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_v1p71")
+light_radius = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1243207954]
 texture = SubResource("NoiseTexture2D_qrgxw")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=983901837]
 scale = Vector2(29.159985, 23.880003)
+range_z_min = -2000
+range_z_max = 2000
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_lw856")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1380609017]

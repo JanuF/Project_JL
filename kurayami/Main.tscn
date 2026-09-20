@@ -21,12 +21,22 @@ polygon = PackedVector2Array(-1, 2, 1, 647, 1152, 646, 1154, 2)
 
 [node name="Light" parent="." unique_id=1749419172 instance=ExtResource("2_r0du0")]
 position = Vector2(227, 313)
+scale = Vector2(0.16456354, 0.18090884)
+light_radius = 400.0
 
-[node name="Player" parent="." unique_id=1525202441 node_paths=PackedStringArray("light") instance=ExtResource("1_uu6xs")]
+[node name="Light2" parent="." unique_id=1814467631 instance=ExtResource("2_r0du0")]
+position = Vector2(375, 479)
+scale = Vector2(0.16508526, 0.16631337)
+light_radius = 400.0
+
+[node name="Light3" parent="." unique_id=604845898 instance=ExtResource("2_r0du0")]
+position = Vector2(608, 495)
+scale = Vector2(0.16508526, 0.16631337)
+light_radius = 400.0
+
+[node name="Player" parent="." unique_id=1525202441 groups=["lights"] instance=ExtResource("1_uu6xs")]
 position = Vector2(500, 125)
 speed = 300.0
-light = NodePath("../Light")
-light_radius = 500.0
 darkness_threshold = 0.3
 gun_range = 1000.0
 teleport_distance = 300.0
